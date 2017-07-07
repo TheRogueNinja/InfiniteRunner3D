@@ -46,14 +46,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AudioKill.cs" />
      <Compile Include="Assets\Scripts\DataMananger.cs" />
+     <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Scripts\FuelGauge.cs" />
+     <Compile Include="Assets\Scripts\HomeScoreDisp.cs" />
      <Compile Include="Assets\Scripts\PlayerCol.cs" />
      <Compile Include="Assets\Scripts\PlayerFoll.cs" />
      <Compile Include="Assets\Scripts\PlayerMov.cs" />
      <Compile Include="Assets\Scripts\RotateCoin.cs" />
+     <Compile Include="Assets\Scripts\SceneToLoad.cs" />
      <Compile Include="Assets\Scripts\ScoreMan.cs" />
      <Compile Include="Assets\Scripts\SpawnObjects.cs" />
+     <Compile Include="Assets\Scripts\SpawnTrees.cs" />
+     <Compile Include="Assets\Scripts\StartGame.cs" />
      <None Include="Assets\Epic_Arsenal_Essential_Elements_Demo_Packs\_README.txt" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
