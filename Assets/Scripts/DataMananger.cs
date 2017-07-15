@@ -8,7 +8,9 @@ public class DataMananger : MonoBehaviour {
 	public int highScore;
 	public int coinsCollected;
 	public int currentScore;
-	void Awake(){
+	void Awake()
+	{
+		
 		if(dataMananger == null){
 			DontDestroyOnLoad(gameObject);
 			dataMananger = this;
@@ -16,6 +18,7 @@ public class DataMananger : MonoBehaviour {
 		else if(dataMananger != null){
 			Destroy(gameObject);
 		}
+		
 	}
 	public void saveData(){
 		Debug.Log("Save");
@@ -36,6 +39,8 @@ public class DataMananger : MonoBehaviour {
 			highScore = data.highScore;
 			coinsCollected = data.coinsCollected;
 			Debug.Log("load");
+			Debug.Log(data.highScore);
+			Debug.Log(data.coinsCollected);
 		}
 	}
 

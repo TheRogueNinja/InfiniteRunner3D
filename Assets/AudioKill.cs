@@ -4,7 +4,22 @@ using UnityEngine;
 
 public class AudioKill : MonoBehaviour {
 	bool soundToggle = true;
-	public void audioKill(){
+
+	[SerializeField]
+	public AudioSource audio;
+
+	public void audioKill()
+	{
+
+		if(audio.volume != 0f)
+		{
+			audio.volume = 0f;
+		}
+		else
+		{
+			audio.volume = 1f;
+		}
+		/**
 		soundToggle = !soundToggle;
 		Debug.Log(soundToggle);
 		if(soundToggle)
@@ -16,5 +31,6 @@ public class AudioKill : MonoBehaviour {
   			}
 		
 		GetComponent<AudioSource>().Equals(false);
+		**/
 	}
 }

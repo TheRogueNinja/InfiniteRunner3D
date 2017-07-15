@@ -13,7 +13,8 @@ public class SpawnTrees : MonoBehaviour {
 		gameObject.transform.Translate(transform.right*10*Time.deltaTime);
 		treeTimer-=Time.deltaTime;
 		if(treeTimer<=0.01){
-			Instantiate(trees[Random.Range(0, trees.Length)],new Vector3(gameObject.transform.position.x+70,0,Random.Range(-10,10)),Quaternion.identity);
+			GameObject Tree = Instantiate(trees[Random.Range(0, trees.Length)],new Vector3(gameObject.transform.position.x+70,0,Random.Range(-10,10)),Quaternion.Euler(0,Random.Range(0,360),0)) as GameObject;
+			Tree.transform.localScale = new Vector3(Random.Range(1f,2.5f),Random.Range(1f,2.5f),Random.Range(1f,2.5f));
 			treeTimer=0.3f;
 		}
 	}

@@ -10,6 +10,16 @@ public class PlayerCol : MonoBehaviour {
 	public GameObject crashParticle;
 	public GameObject Fireworks;
 	PlayerFoll pf;
+
+
+	void Start()
+	{
+		//Debug.LogWarning("Start");
+		Camera.main.GetComponent<AudioSource>().volume = (PlayerPrefs.GetInt("Vol"));
+		GetComponent<AudioSource>().volume = (PlayerPrefs.GetInt("Vol"));
+		Debug.Log(GetComponent<AudioSource>().volume);
+	}
+
 	void OnCollisionEnter(Collision col){
 		if(col.gameObject.tag == "Enemy"){
 			DataMananger.dataMananger.saveData();

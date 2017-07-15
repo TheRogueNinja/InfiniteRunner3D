@@ -7,8 +7,13 @@ public class HomeScoreDisp : MonoBehaviour {
 	
 	public GameObject coins;
 	public GameObject highScoreUI;
-		void Update () {
-		coins.GetComponent<Text>().text = ("Coins Collected: "+DataMananger.dataMananger.coinsCollected.ToString());
-		highScoreUI.GetComponent<Text>().text = ("High Score: "+DataMananger.dataMananger.highScore.ToString());
+
+public GameObject dataMan;
+
+	void Start()
+	{
+		dataMan.GetComponent<DataMananger>().loadData();
+		coins.GetComponent<Text>().text = ("Coins Collected: "+dataMan.GetComponent<DataMananger>().coinsCollected.ToString());
+		highScoreUI.GetComponent<Text>().text = ("High Score: "+dataMan.GetComponent<DataMananger>().highScore.ToString());
 	}
 }
